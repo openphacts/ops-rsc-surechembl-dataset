@@ -5,7 +5,7 @@
   <artifactId>ops-rsc-surechembl</artifactId>
   <version>0.20160112.0-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>Open PHACTS RSC SureChembl data and linkset</name>
+  <name>Open PHACTS RSC SureChembl data</name>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
