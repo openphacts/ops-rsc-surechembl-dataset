@@ -2,18 +2,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.openphacts.data</groupId>
-  <artifactId>ops-rsc-surechembl-dataset</artifactId>
+  <artifactId>ops-rsc-surechembl</artifactId>
   <version>0.20160112.0-SNAPSHOT</version>
-  <packaging>data</packaging>
-  <name>Open PHACTS RSC linksets</name>
+  <packaging>pom</packaging>
+  <name>Open PHACTS RSC SureChembl data and linkset</name>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <download.directory>${project.build.directory}/download</download.directory>
-    <data.directory>${download.directory}/${folder}</data.directory>
-    <version>2016.01.12</version>
-    <folder>20160112</folder>
-    <sha1>000</sha1>
   </properties>
 
   <licenses>
@@ -23,9 +18,9 @@
     </license>
   </licenses>
   <scm>
-    <connection>scm:git:https://github.com/openphacts/ops-rsc-dataset.git</connection>
-    <developerConnection>scm:git:git@github.com:openphacts/ops-rsc-dataset.git</developerConnection>
-    <url>https://github.com/openphacts/ops-rsc-dataset</url>
+    <connection>scm:git:https://github.com/openphacts/ops-rsc-surechembl-dataset.git</connection>
+    <developerConnection>scm:git:git@github.com:openphacts/ops-rsc-surechembl-dataset.git</developerConnection>
+    <url>https://github.com/openphacts/ops-rsc-surechembl-dataset</url>
     <tag>HEAD</tag>
   </scm>
 
@@ -36,82 +31,7 @@
           <artifactId>data-maven-plugin</artifactId>
           <version>0.0.6</version>
           <extensions>true</extensions>
-          <configuration>
-            <dataDirectory>${data.directory}</dataDirectory>
-          </configuration>
       </plugin>
-      <plugin>
-        <groupId>com.googlecode.maven-download-plugin</groupId>
-        <artifactId>download-maven-plugin</artifactId>
-        <version>1.2.1</version>
-        <executions>
-            <execution>
-                <id>get-data</id>
-                <phase>generate-sources</phase>
-                <goals>
-                    <goal>wget</goal>
-                </goals>
-                <configuration>
-                    <!--<url>http://ops.rsc.org/download/RDF-2015.11.04.zip</url>-->
-                    <url>http://ops.rsc.org/download/RDF-${version}.zip</url>
-                    <unpack>true</unpack>
-                    <outputDirectory>${download.directory}</outputDirectory>
-                    <!--<sha1>${sha1}</sha1>-->
-                    <!--<skipCache>true</skipCache>-->
-                </configuration>
-            </execution>
-        </executions>
-      </plugin>
-<!--
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-patch-plugin</artifactId>
-        <version>1.2</version>
-        <configuration>
-          <targetDirectory>${data.directory}</targetDirectory>
-          <strictPatching>true</strictPatching>
-          <patches>
-            <patch>01-mesh-linkset-exact.patch</patch>
-          </patches>
-        </configuration>
-        <executions>
-          <execution>
-            <id>patch</id>
-            <phase>process-sources</phase>
-            <goals>
-              <goal>apply</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
--->
-<!--
-      <plugin>
-        <artifactId>maven-antrun-plugin</artifactId>
-            <executions>
-              <execution>
-                <id>fix-chembl</id>
-                <phase>process-sources</phase>
-                <configuration>
-                  <tasks>
-                    <replace token="ops:OPSOPS" value="ops:OPS" dir="${data.directory}" encoding="UTF-8">
-                      <include name="CHEMBL/PROPERTIES*.ttl"/>
-                    </replace>
-                    <replace token="http://ops.rsc.org//" value="http://ops.rsc.org/" dir="${data.directory}" encoding="UTF-8">
-                      <include name="**/*.ttl"/>
-                    </replace>
-                    <replace token="http://purl.uniprot.org/pdb/" value="http://identifiers.org/pdb.ligand/" dir="${data.directory}" encoding="UTF-8">
-                      <include name="PDB/*.ttl"/>
-                    </replace>
-                  </tasks>
-                </configuration>
-                <goals>
-                  <goal>run</goal>
-                </goals>
-              </execution>
-            </executions>
-      </plugin>
--->
     </plugins>
   </build>
 
@@ -148,4 +68,10 @@
       <url>http://repository.mygrid.org.uk/artifactory/ops/</url>
     </snapshotRepository>
   </distributionManagement>
+
+  <modules>
+    <module>ops-rsc-surechembl-dataset</module>
+    <module>ops-rsc-surechembl-linkset</module>
+  </modules>
+
 </project>
