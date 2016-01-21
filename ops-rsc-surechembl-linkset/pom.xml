@@ -8,7 +8,7 @@
   </parent>
   <artifactId>ops-rsc-surechembl-linkset</artifactId>
   <packaging>data</packaging>
-  <name>Open PHACTS SureChembl linksets</name>
+  <name>Open PHACTS RSC SureChembl linksets</name>
   <properties>
     <upstream.directory>${project.build.directory}/upstream</upstream.directory>
   </properties>
