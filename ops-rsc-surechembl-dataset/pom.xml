@@ -14,7 +14,7 @@
     <data.directory>${download.directory}/${folder}</data.directory>
     <version>2016.01.12</version>
     <folder>20160112</folder>
-    <sha1>000</sha1>
+    <sha1>6d3bfe8055d86f1f251e9c8550601abd21e77120</sha1>
   </properties>
 
 
@@ -41,11 +41,10 @@
                     <goal>wget</goal>
                 </goals>
                 <configuration>
-                    <!--<url>http://ops.rsc.org/download/RDF-2015.11.04.zip</url>-->
                     <url>http://ops.rsc.org/download/RDF-${version}.zip</url>
                     <unpack>true</unpack>
                     <outputDirectory>${download.directory}</outputDirectory>
-                    <!--<sha1>${sha1}</sha1>-->
+                    <sha1>${sha1}</sha1>
                     <!--<skipCache>true</skipCache>-->
                 </configuration>
             </execution>
