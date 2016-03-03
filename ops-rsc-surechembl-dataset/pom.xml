@@ -4,19 +4,11 @@
   <parent>
     <groupId>org.openphacts.data</groupId>
     <artifactId>ops-rsc-surechembl</artifactId>
-    <version>0.20160302.0-SNAPSHOT</version>
+    <version>0.20160224.0-SNAPSHOT</version>
   </parent>
   <artifactId>ops-rsc-surechembl-dataset</artifactId>
   <packaging>data</packaging>
   <name>Open PHACTS RSC SureChembl dataset</name>
-  <properties>
-    <download.directory>${project.build.directory}/download</download.directory>
-    <data.directory>${download.directory}/${folder}</data.directory>
-    <version>2016.01.12</version>
-    <folder>20160112</folder>
-    <sha1>6d3bfe8055d86f1f251e9c8550601abd21e77120</sha1>
-  </properties>
-
 
   <build>
     <plugins>
@@ -25,30 +17,6 @@
           <artifactId>data-maven-plugin</artifactId>
           <version>0.0.6</version>
           <extensions>true</extensions>
-          <configuration>
-            <dataDirectory>${data.directory}</dataDirectory>
-          </configuration>
-      </plugin>
-      <plugin>
-        <groupId>com.googlecode.maven-download-plugin</groupId>
-        <artifactId>download-maven-plugin</artifactId>
-        <version>1.2.1</version>
-        <executions>
-            <execution>
-                <id>get-data</id>
-                <phase>generate-sources</phase>
-                <goals>
-                    <goal>wget</goal>
-                </goals>
-                <configuration>
-                    <url>http://ops.rsc.org/download/RDF-${version}.zip</url>
-                    <unpack>true</unpack>
-                    <outputDirectory>${download.directory}</outputDirectory>
-                    <sha1>${sha1}</sha1>
-                    <!--<skipCache>true</skipCache>-->
-                </configuration>
-            </execution>
-        </executions>
       </plugin>
 <!--
       <plugin>

@@ -1,0 +1,204 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dctype: <http://purl.org/dc/dcmitype/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix freq: <http://purl.org/cld/freq/>.
+@prefix pav: <http://purl.org/pav/>.
+@prefix voag: <http://voag.linkedmodel.org/schema/voag#>.
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+@prefix obo2: <http://purl.obolibrary.org/obo#>.
+@prefix cheminf: <http://semanticscience.org/resource/>.
+@prefix : <http://ops.rsc.org/download/20160224/void_2016-02-24.ttl#>.
+
+<http://ops.rsc.org/download/20160224/void_2016-02-24.ttl> dcterms:description "OpenPhacts Dataset"@en;
+                                                           dcterms:title "A VoID Description of the OpenPhacts Dataset"@en;
+                                                           pav:createdBy <http://ops.rsc.org/>;
+                                                           pav:createdOn "2012-10-24T10:49:00Z"^^xsd:dateTime;
+                                                           pav:lastUpdateOn "2016-02-24T17:37:44Z"^^xsd:dateTime;
+                                                           pav:previousVersion <http://ops.rsc.org/download/20160224/void_2016-02-24.ttl>;
+                                                           a void:DatasetDescription;
+                                                           foaf:primaryTopic :openphactsDataset.
+:openphacts-sure_chembl dcterms:description "The subset of OpenPhacts that contains Sure ChEMBL data."@en;
+                        dcterms:title "OpenPhacts Sure ChEMBL Subset"@en;
+                        void:dataDump <http://ops.rsc.org/download/20160224/SURE_CHEMBL/ISSUES_20160224SURE_CHEMBL.ttl>,
+                                      <http://ops.rsc.org/download/20160224/SURE_CHEMBL/PROPERTIES_20160224SURE_CHEMBL.ttl>,
+                                      <http://ops.rsc.org/download/20160224/SURE_CHEMBL/SYNONYMS_20160224SURE_CHEMBL.ttl>;
+                        void:subset :sure_chembl_exactMatch,
+                                    :sure_chembl_ops_chemspider_exactMatch,
+                                    :sure_chembl_parent_child_charge_insensitive_parent_closeMatch,
+                                    :sure_chembl_parent_child_fragment_relatedMatch,
+                                    :sure_chembl_parent_child_isotope_insensitive_parent_closeMatch,
+                                    :sure_chembl_parent_child_stereo_insensitive_parent_closeMatch,
+                                    :sure_chembl_parent_child_super_insensitive_parent_closeMatch,
+                                    :sure_chembl_parent_child_tautomer_insensitive_parent_closeMatch;
+                        a void:Dataset;
+                        prov:wasDerivedFrom :sure_chembl;
+                        foaf:page <https://www.surechembl.org/>.
+:openphactsDataset dcterms:created "2007-03-01T00:00:00Z"^^xsd:dateTime;
+                   dcterms:description "OpenPhacts Dataset"@en;
+                   dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                   dcterms:modified "2016-02-24T17:37:44Z"^^xsd:dateTime;
+                   dcterms:publisher <http://ops.rsc.org/>;
+                   dcterms:subject <http://dbpedia.org/resource/Molecule>;
+                   dcterms:title "OpenPhacts Dataset"@en;
+                   void:exampleResource <http://ops.rsc.org/Compounds/Get/403534>;
+                   void:feature <http://www.w3.org/ns/formats/data/Turtle>;
+                   void:subset :openphacts-sure_chembl;
+                   void:uriSpace "http://ops.rsc.org/"^^xsd:string;
+                   void:vocabulary obo2:,
+                                   <http://purl.obolibrary.org/obo/>,
+                                   dctype:,
+                                   dcterms:,
+                                   pav:,
+                                   <http://qudt.org/1.1/schema/qudt#>,
+                                   void:,
+                                   cheminf:,
+                                   <http://www.obofoundry.org/ro/ro.owl#>,
+                                   dul:,
+                                   rdf:,
+                                   xsd:,
+                                   <http://www.w3.org/2002/07/owl#>,
+                                   skos:,
+                                   foaf:;
+                   voag:frequencyOfChange freq:monthly;
+                   a void:Dataset;
+                   foaf:homepage <http://ops.rsc.org/>.
+:sure_chembl pav:retrievedBy <http://www.chemspider.com/UserProfile.aspx?username=batchelorc@rsc.org>;
+             pav:retrievedFrom <ftp://ftp-private.ebi.ac.uk/data/SureChEMBL_RDF/1.0.5/surechembl_1.0.sdf.gz>;
+             pav:retrievedOn "2015-12-02T10:27:00Z"^^xsd:dateTime;
+             pav:version "1.0"^^xsd:string;
+             a dctype:Dataset;
+             foaf:homepage <https://www.surechembl.org/>.
+:sure_chembl_exactMatch dcterms:description "Sure ChEMBL linkset of compounds deposited into OpenPhacts that match exactly with OpenPhacts compounds."@en;
+                        dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                        dcterms:title "OpenPhacts Sure ChEMBL exact match Linkset"@en;
+                        pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                        pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                        pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                        pav:createdOn "2016-02-24T17:37:44Z"^^xsd:dateTime;
+                        pav:createdWith <http://ops.rsc.org/>;
+                        pav:previousVersion :sure_chembl_exactMatch;
+                        void:dataDump <http://ops.rsc.org/download/20160224/SURE_CHEMBL/LINKSET_EXACT_SURE_CHEMBL20160224.ttl>;
+                        void:linkPredicate skos:exactMatch;
+                        void:objectsTarget <http://rdf.ebi.ac.uk/dataset/surechembl/1.0/void.ttl#>;
+                        void:subjectsTarget :openphacts-sure_chembl;
+                        void:triples 14228299 ;
+                        dul:expresses cheminf:CHEMINF_000059;
+                        a void:Linkset.
+:sure_chembl_ops_chemspider_exactMatch dcterms:description "Sure ChEMBL linkset of compounds deposited into OpenPhacts that match exactly with ChemSpider compounds."@en;
+                                       dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                       dcterms:title "OpenPhacts Sure ChEMBL OPS-ChemSpider Linkset"@en;
+                                       pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                       pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                       pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                       pav:createdOn "2016-02-24T17:37:44Z"^^xsd:dateTime;
+                                       pav:createdWith <http://ops.rsc.org/>;
+                                       pav:previousVersion :sure_chembl_ops_chemspider_exactMatch;
+                                       void:dataDump <http://ops.rsc.org/download/20160224/SURE_CHEMBL/LINKSET_EXACT_OPS_CHEMSPIDER_SURE_CHEMBL20160224.ttl>;
+                                       void:linkPredicate skos:exactMatch;
+                                       void:objectsTarget <http://rdf.chemspider.com/void.rdf>;
+                                       void:subjectsTarget :openphactsDataset;
+                                       void:triples 1363252 ;
+                                       dul:expresses cheminf:CHEMINF_000059;
+                                       a void:Linkset.
+:sure_chembl_parent_child_charge_insensitive_parent_closeMatch dcterms:description "Charge Insensitive Parent: Charge Insensitive Parent: this parent is generated when it is possible to unambiguously neutralize charge, e.g. metal cation to metal or carboxylate to carboxylic acid."@en;
+                                                               dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                               dcterms:title "OpenPhacts Sure ChEMBL Charge Insensitive Parent Parent-Child Linkset"@en;
+                                                               pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                               pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                               pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                               pav:createdOn "2016-02-24T17:37:44Z"^^xsd:dateTime;
+                                                               pav:createdWith <http://ops.rsc.org/>;
+                                                               pav:previousVersion :sure_chembl_parent_child_charge_insensitive_parent_closeMatch;
+                                                               void:dataDump <http://ops.rsc.org/download/20160224/SURE_CHEMBL/LINKSET_CLOSE_PARENT_CHILD_CHARGE_INSENSITIVE_PARENT_SURE_CHEMBL20160224.ttl>;
+                                                               void:linkPredicate skos:closeMatch;
+                                                               void:objectsTarget :openphactsDataset;
+                                                               void:subjectsTarget :openphactsDataset;
+                                                               void:triples 384233 ;
+                                                               dul:expresses cheminf:CHEMINF_000460;
+                                                               a void:Linkset.
+:sure_chembl_parent_child_fragment_relatedMatch dcterms:description "Fragment: Fragment: fragment relationships are for dealing with mixtures or ion/counter ion couples. It will connect each distinct chemical in the mixture or couple to the parent."@en;
+                                                dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                dcterms:title "OpenPhacts Sure ChEMBL Fragment Parent-Child Linkset"@en;
+                                                pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                pav:createdOn "2016-02-24T17:37:44Z"^^xsd:dateTime;
+                                                pav:createdWith <http://ops.rsc.org/>;
+                                                pav:previousVersion :sure_chembl_parent_child_fragment_relatedMatch;
+                                                void:dataDump <http://ops.rsc.org/download/20160224/SURE_CHEMBL/LINKSET_RELATED_PARENT_CHILD_FRAGMENT_SURE_CHEMBL20160224.ttl>;
+                                                void:linkPredicate skos:relatedMatch;
+                                                void:objectsTarget :openphactsDataset;
+                                                void:subjectsTarget :openphactsDataset;
+                                                void:triples 664822 ;
+                                                dul:expresses obo2:has_part;
+                                                a void:Linkset.
+:sure_chembl_parent_child_isotope_insensitive_parent_closeMatch dcterms:description "Isotope Insensitive Parent: Isotope Insensitive Parent: this parent replaces all isotopes with average mass."@en;
+                                                                dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                                dcterms:title "OpenPhacts Sure ChEMBL Isotope Insensitive Parent Parent-Child Linkset"@en;
+                                                                pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                                pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                pav:createdOn "2016-02-24T17:37:44Z"^^xsd:dateTime;
+                                                                pav:createdWith <http://ops.rsc.org/>;
+                                                                pav:previousVersion :sure_chembl_parent_child_isotope_insensitive_parent_closeMatch;
+                                                                void:dataDump <http://ops.rsc.org/download/20160224/SURE_CHEMBL/LINKSET_CLOSE_PARENT_CHILD_ISOTOPE_INSENSITIVE_PARENT_SURE_CHEMBL20160224.ttl>;
+                                                                void:linkPredicate skos:closeMatch;
+                                                                void:objectsTarget :openphactsDataset;
+                                                                void:subjectsTarget :openphactsDataset;
+                                                                void:triples 12489 ;
+                                                                dul:expresses cheminf:CHEMINF_000459;
+                                                                a void:Linkset.
+:sure_chembl_parent_child_stereo_insensitive_parent_closeMatch dcterms:description "Stereo Insensitive Parent: Stereo Insensitive Parent: this parent completely strips out stereo (both SP3 and double bond)"@en;
+                                                               dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                               dcterms:title "OpenPhacts Sure ChEMBL Stereo Insensitive Parent Parent-Child Linkset"@en;
+                                                               pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                               pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                               pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                               pav:createdOn "2016-02-24T17:37:44Z"^^xsd:dateTime;
+                                                               pav:createdWith <http://ops.rsc.org/>;
+                                                               pav:previousVersion :sure_chembl_parent_child_stereo_insensitive_parent_closeMatch;
+                                                               void:dataDump <http://ops.rsc.org/download/20160224/SURE_CHEMBL/LINKSET_CLOSE_PARENT_CHILD_STEREO_INSENSITIVE_PARENT_SURE_CHEMBL20160224.ttl>;
+                                                               void:linkPredicate skos:closeMatch;
+                                                               void:objectsTarget :openphactsDataset;
+                                                               void:subjectsTarget :openphactsDataset;
+                                                               void:triples 0 ;
+                                                               dul:expresses cheminf:CHEMINF_000456;
+                                                               a void:Linkset.
+:sure_chembl_parent_child_super_insensitive_parent_closeMatch dcterms:description "Super Insensitive Parent: Super Insensitive Parent: this parent is produced by sequential application of molecular modifications to produce stereo insensitive, charge insensitive, isotope insensitive parent."@en;
+                                                              dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                              dcterms:title "OpenPhacts Sure ChEMBL Super Insensitive Parent Parent-Child Linkset"@en;
+                                                              pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                              pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                              pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                              pav:createdOn "2016-02-24T17:37:44Z"^^xsd:dateTime;
+                                                              pav:createdWith <http://ops.rsc.org/>;
+                                                              pav:previousVersion :sure_chembl_parent_child_super_insensitive_parent_closeMatch;
+                                                              void:dataDump <http://ops.rsc.org/download/20160224/SURE_CHEMBL/LINKSET_CLOSE_PARENT_CHILD_SUPER_INSENSITIVE_PARENT_SURE_CHEMBL20160224.ttl>;
+                                                              void:linkPredicate skos:closeMatch;
+                                                              void:objectsTarget :openphactsDataset;
+                                                              void:subjectsTarget :openphactsDataset;
+                                                              void:triples 263910 ;
+                                                              dul:expresses cheminf:CHEMINF_000458;
+                                                              a void:Linkset.
+:sure_chembl_parent_child_tautomer_insensitive_parent_closeMatch dcterms:description "Tautomer Insensitive Parent: Tautomer Insensitive Parent: this parent represents the canonicalized tautomer."@en;
+                                                                 dcterms:license <http://creativecommons.org/licenses/by-sa/3.0/>;
+                                                                 dcterms:title "OpenPhacts Sure ChEMBL Tautomer Insensitive Parent Parent-Child Linkset"@en;
+                                                                 pav:authoredBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                 pav:authoredOn "2012-10-30T12:16:00Z"^^xsd:dateTime;
+                                                                 pav:createdBy <http://www.chemspider.com/UserProfile.aspx?username=jonsteele>;
+                                                                 pav:createdOn "2016-02-24T17:37:44Z"^^xsd:dateTime;
+                                                                 pav:createdWith <http://ops.rsc.org/>;
+                                                                 pav:previousVersion :sure_chembl_parent_child_tautomer_insensitive_parent_closeMatch;
+                                                                 void:dataDump <http://ops.rsc.org/download/20160224/SURE_CHEMBL/LINKSET_CLOSE_PARENT_CHILD_TAUTOMER_INSENSITIVE_PARENT_SURE_CHEMBL20160224.ttl>;
+                                                                 void:linkPredicate skos:closeMatch;
+                                                                 void:objectsTarget :openphactsDataset;
+                                                                 void:subjectsTarget :openphactsDataset;
+                                                                 void:triples 0 ;
+                                                                 dul:expresses obo2:is_tautomer_of;
+                                                                 a void:Linkset.

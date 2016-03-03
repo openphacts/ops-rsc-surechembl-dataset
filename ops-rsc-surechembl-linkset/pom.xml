@@ -3,7 +3,7 @@
   <parent>
     <groupId>org.openphacts.data</groupId>
     <artifactId>ops-rsc-surechembl</artifactId>
-    <version>0.20160302.0-SNAPSHOT</version>
+    <version>0.20160224.0-SNAPSHOT</version>
   </parent>
   <artifactId>ops-rsc-surechembl-linkset</artifactId>
   <packaging>data</packaging>
@@ -44,7 +44,7 @@
               <goal>unpack</goal>
             </goals>
             <configuration>
-              <includes>data/ops-rsc-surechembl-dataset/void*.ttl,data/ops-rsc-surechembl-dataset/*/LINKSET*.ttl</includes>
+              <includes>data/ops-rsc-surechembl-dataset/void*.ttl,data/ops-rsc-surechembl-dataset/*/LINKSET*.ttl.gz</includes>
               <outputDirectory>${upstream.directory}</outputDirectory>
             </configuration>
           </execution>
