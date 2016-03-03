@@ -71,7 +71,7 @@
 
   <modules>
     <module>ops-rsc-surechembl-dataset</module>
-    <module>ops-rsc-surechembl-linkset</module>
+    <module>ops-rsc-surechembl-linksets</module>
   </modules>
 
 </project>
