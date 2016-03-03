@@ -62,7 +62,7 @@
         <name>b6e18a12df08-releases</name>
         <url>http://data.openphacts.org/artifactory/data-maven</url>
     </repository>
-    </snapshotRepository>
+    <snapshotRepository>
         <id>b6e18a12df08</id>
         <name>b6e18a12df08-snapshots</name>
         <url>http://data.openphacts.org/artifactory/data-maven-dev</url>
