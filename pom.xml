@@ -58,14 +58,14 @@
 
   <distributionManagement>
     <repository>
-      <id>ops</id>
-      <name>Open PHACTS repository</name>
-      <url>http://repository.mygrid.org.uk/artifactory/ops/</url>
+        <id>b6e18a12df08</id>
+        <name>b6e18a12df08-releases</name>
+        <url>http://data.openphacts.org/artifactory/data-maven</url>
     </repository>
-    <snapshotRepository>
-      <id>ops</id>
-      <name>Open PHACTS repository</name>
-      <url>http://repository.mygrid.org.uk/artifactory/ops/</url>
+    </snapshotRepository>
+        <id>b6e18a12df08</id>
+        <name>b6e18a12df08-snapshots</name>
+        <url>http://data.openphacts.org/artifactory/data-maven-dev</url>
     </snapshotRepository>
   </distributionManagement>
 
