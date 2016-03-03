@@ -4,7 +4,7 @@
   <parent>
     <groupId>org.openphacts.data</groupId>
     <artifactId>ops-rsc-surechembl</artifactId>
-    <version>0.20160112.0-SNAPSHOT</version>
+    <version>0.20160302.0-SNAPSHOT</version>
   </parent>
   <artifactId>ops-rsc-surechembl-dataset</artifactId>
   <packaging>data</packaging>
@@ -83,13 +83,13 @@
                 <configuration>
                   <tasks>
                     <replace token="ops:OPSOPS" value="ops:OPS" dir="${data.directory}" encoding="UTF-8">
-                      <include name="CHEMBL/PROPERTIES*.ttl"/>
+                      <include name="CHEMBL/PROPERTIES*.ttl" />
                     </replace>
                     <replace token="http://ops.rsc.org//" value="http://ops.rsc.org/" dir="${data.directory}" encoding="UTF-8">
-                      <include name="**/*.ttl"/>
+                      <include name="**/*.ttl" />
                     </replace>
                     <replace token="http://purl.uniprot.org/pdb/" value="http://identifiers.org/pdb.ligand/" dir="${data.directory}" encoding="UTF-8">
-                      <include name="PDB/*.ttl"/>
+                      <include name="PDB/*.ttl" />
                     </replace>
                   </tasks>
                 </configuration>
