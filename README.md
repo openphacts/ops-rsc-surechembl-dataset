@@ -66,6 +66,6 @@ Use in your pom.xml:
 ```
 
 The `<version>` above might not be the latest, see the 
-[GitHub releases](https://github.com/openphacts/ops-rsc-dataset/releases)
+[GitHub releases](https://github.com/openphacts/ops-rsc-surechembl-dataset/releases)
 for the latest version.
 
