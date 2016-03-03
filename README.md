@@ -19,6 +19,8 @@ See the [VoID file](ops-rsc-surechembl-dataset/data/void_2016-02-24.ttl) for det
 
 ## Building
 
+    git lfs update
+    git lfs pull # Get the big files
     mvn clean install
     
 Will generate these [Research Object bundles](http://w3id.org/bundle/):
