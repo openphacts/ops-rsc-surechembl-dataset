@@ -30,7 +30,7 @@ Will generate these [Research Object bundles](http://w3id.org/bundle/):
   
 ## Maven repository
 
-These artifacts are also available from -data.openphacts.org- the 
+These artifacts are also available from ~~data.openphacts.org~~ the 
 [backup of data.openphacts.org Maven repository](https://repository.mygrid.org.uk/artifactory/ops/org/openphacts/data/), 
 under the group Id 
 [org.openphacts.data](https://repository.mygrid.org.uk/artifactory/ops/org/openphacts/data/).
