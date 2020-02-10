@@ -30,10 +30,10 @@ Will generate these [Research Object bundles](http://w3id.org/bundle/):
   
 ## Maven repository
 
-These artifacts are also available from the 
-[data.openphacts.org Maven repository](http://data.openphacts.org/artifactory/data/), 
+These artifacts are also available from -data.openphacts.org- the 
+[backup of data.openphacts.org Maven repository](https://repository.mygrid.org.uk/artifactory/ops/org/openphacts/data/), 
 under the group Id 
-[org.openphacts.data](http://data.openphacts.org/artifactory/data/org/openphacts/data/).
+[org.openphacts.data](https://repository.mygrid.org.uk/artifactory/ops/org/openphacts/data/).
 
 
 Use in your pom.xml:
@@ -60,7 +60,7 @@ Use in your pom.xml:
     <repository>
       <id>ops</id>
       <name>Open PHACTS repository</name>
-      <url>http://repository.mygrid.org.uk/artifactory/ops/</url>
+      <url>https://repository.mygrid.org.uk/artifactory/ops/</url>
       <releases />
       <snapshots />
     </repository>
